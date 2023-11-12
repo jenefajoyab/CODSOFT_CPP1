@@ -1,0 +1,28 @@
+#include<iostream.h>
+#include<conio.h>
+#include<stdlib.h>
+#include<time.h>
+int main()
+{
+  int n,guess;
+  srand(time(0));
+  cout<<"generate a random number\n";
+  n=rand()%30000;
+  cout<<"guess the number\n";
+  cout<<"random="<<n<<"\n";
+  do
+  {
+    cout<<"enter the user guessed number\n";
+    cin>>guess;
+    if(guess>n)
+      cout<<"guess is too high\n";
+    else if(guess<n)
+      cout<<"guess is too low\n";
+    else
+      cout<<"correct guess\n";
+  }while(guess!=n);
+  getch();
+  return 0;
+}
+
+
